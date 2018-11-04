@@ -1,0 +1,34 @@
+
+# your project directory
+export PROJECTS=$HOME/workspaces
+
+# where you cloned the dotfile repo to
+export DOTFILES=$PROJECTS/dotfiles
+
+# put your environment variables in ~/.localrc.
+if [[ -a $HOME/.localrc ]]
+then
+    source $HOME/.localrc
+fi
+
+# load the path files
+for file in $(find -H "$DOTFILES" -maxdepth 2 -name 'path.zsh')
+do
+    source $file
+done
+
+#load everything but path and completion
+for file in $(find -H "$DOTFILES" -maxdepth 2 -name '[!path|!completion]*.zsh')
+do
+    source $file
+done
+
+# compinit  
+
+for file in $(find -H "$DOTFILES" -maxdepth 2 -name 'completion.zsh')
+do
+    source $file
+done
+
+
+
