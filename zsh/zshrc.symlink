@@ -11,30 +11,27 @@ config_files=($DOTFILES/**/*.zsh)
 # put your environment variables in ~/.localrc.
 if [[ -a $HOME/.localrc ]]
 then
-    echo "Source $HOME/.localrc"
+    # echo "Source $HOME/.localrc"
     source $HOME/.localrc
 fi
 
 # load the path files
 for file in ${(M)${config_files#*/oh-my-zsh/oh-my-zsh/*/*.zsh}:#*/path.zsh}
 do
-    echo "Source $file"
+    # echo "Source $file"
     source $file
 done
 
 #load everything but path and completion
 for file in ${${${config_files#*/oh-my-zsh/oh-my-zsh/*/*.zsh}#*/path.zsh}#*/completion.zsh}
 do
-    echo "Source $file"
+    # echo "Source $file"
     source $file
 done
 
 
 for file in ${(M)${config_files#*/oh-my-zsh/oh-my-zsh/*/*.zsh}:#*/completion.zsh}
 do
-    echo "Source $file"
+    # echo "Source $file"
     source $file
 done
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
