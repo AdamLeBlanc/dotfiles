@@ -6,7 +6,7 @@ link_file() {
     local src=$1 dst=$2
 
     # if dst exist, delete it
-    if [ -f "dst" -o "$dst" -o L "$dst"] 
+    if [ -f "$dst" -o "$dst" -o -L "$dst" ] 
     then
         # TODO: Ask user what to do
         rm -rf "$dst"
