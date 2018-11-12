@@ -9,4 +9,5 @@ then
     fi
 fi
 
+echo "installing brew bundles"
 brew bundle
