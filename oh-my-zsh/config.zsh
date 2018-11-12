@@ -69,6 +69,14 @@ plugins=(
   git
   zsh-better-npm-completion
   zsh-nvm
+  colorize
+  docker
+  docker-compose
+  git-flow
+  thefuck
+  vi-mode
+  vscode
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
