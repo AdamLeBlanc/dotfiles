@@ -5,5 +5,6 @@ tap 'caskroom/fonts'
 
 brew 'zsh'
 brew 'git'
+brew 'git-flow'
 
 cask 'font-source-code-pro'
