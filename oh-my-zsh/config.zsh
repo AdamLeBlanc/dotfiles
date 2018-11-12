@@ -66,6 +66,7 @@ ZSH_THEME="spaceship"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-better-npm-completion
 )
 
 source $ZSH/oh-my-zsh.sh
