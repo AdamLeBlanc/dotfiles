@@ -1,0 +1,1 @@
+fpath=($DOTFILES/functions $fpath)
