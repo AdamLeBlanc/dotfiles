@@ -67,6 +67,7 @@ ZSH_THEME="spaceship"
 plugins=(
   git
   zsh-better-npm-completion
+  zsh-nvm
 )
 
 source $ZSH/oh-my-zsh.sh
