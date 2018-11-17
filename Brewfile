@@ -12,6 +12,7 @@ brew 'wget'
 brew 'cmake'
 brew 'coreutils'
 brew 'gcc'
+brew 'Pygments'
 
 
 
